@@ -27,29 +27,6 @@ class _InformationScreenState extends State<InformationScreen> {
     {'type': 'Email', 'detail': 'contact@idsteknologi.co.id'},
     {'type': 'Alamat', 'detail': 'Jl. Legenda Wisata Boulevard'},
   ];
-  
-  final List<Map<String, String>> informasiTambahan = [
-    {
-      'image': 'images/libur.jpg',
-      'description': 'Hari libur tahun baru 2024 diundur ke bulan September',
-      'date': '1 Agustus 2024',
-    },
-    {
-      'image': 'images/gaji.jpg',
-      'description': 'Gajian Bulan ini dipercepat lima hari',
-      'date': '15 Juli 2024',
-    },
-    {
-      'image': 'images/liburbersama.jpg',
-      'description': 'Agenda Libur Bersama',
-      'date': '9 September 2024',
-    },
-    {
-      'image': 'images/profil.png',
-      'description': 'Selamat Ulang Tahun, Michi-chan!',
-      'date': '1 Agustus 2024',
-    },
-  ];
 
   @override
   void initState() {
@@ -249,58 +226,6 @@ class _InformationScreenState extends State<InformationScreen> {
     _saveFaq(); // Save changes
   }
 
-  Widget _buildInformasiTambahan(BuildContext context) {
-    return Column(
-      children: informasiTambahan.map((item) {
-        return Padding(
-          padding: const EdgeInsets.symmetric(vertical: 8.0),
-          child: Container(
-            decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(8),
-              border: Border.all(color: Colors.blue),
-            ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Container(
-                  width: double.infinity,
-                  height: 200, // Increase height of image
-                  child: Image.asset(
-                    item['image']!,
-                    fit: BoxFit.cover,
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(12.0),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        item['description']!,
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 16,
-                        ),
-                      ),
-                      SizedBox(height: 8),
-                      Text(
-                        item['date']!,
-                        style: TextStyle(
-                          color: Colors.grey,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ],
-            ),
-          ),
-        );
-      }).toList(),
-    );
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -404,12 +329,6 @@ class _InformationScreenState extends State<InformationScreen> {
               child: Text('Tambah FAQ'),
             ),
             SizedBox(height: 16),
-
-            _buildSectionHeader('Informasi Tambahan', Icons.info, context),
-            SizedBox(height: 8),
-            _buildInformasiTambahan(context),
-            SizedBox(height: 16),
-
             _buildSectionHeader('Hubungi Kami', Icons.contact_phone, context),
             SizedBox(height: 8),
             _buildBoxedContent(
