@@ -1,0 +1,69 @@
+name: aurora_presence_flutter
+description: "A new Flutter project."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.4.3 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  google_fonts: ^6.2.1
+  cupertino_icons: ^1.0.6
+  curved_navigation_bar: ^1.0.6
+  intl: ^0.19.0
+  location: ^4.3.0
+  shared_preferences: ^2.0.15 
+  audioplayers: ^6.0.0
+  flutter_brick: ^0.0.1
+  salomon_bottom_bar: ^3.3.2
+  dio: ^5.6.0
+  google_sign_in: ^6.2.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - images/logo.png
+    - images/des.png
+    - images/bg.jpg
+    - images/bg2.png
+    - images/bg3.jpg
+    - images/profil.png
+    - images/aktivitas.png
+    - images/check-in.png
+    - images/check-out.png
+    - images/dinas.png
+    - images/izin.png
+    - images/izinhome.png
+    - images/lembur.png
+    - images/reimburse.png
+    - images/riwayat.png
+    - images/sakit.png
+    - images/verified.png
+    - images/butjadwal.png
+    - images/butslipgaji.png
+    - images/butkusioner.png
+    - images/butkegiatan.png
+    - images/butpengajuan.png
+    - images/butinformasi.png
+    - images/kantor1.jpg
+    - images/kantor2.jpeg
+    - images/kantor3.jpg
+    - images/david.png
+    - images/lanny.png
+    - images/andy.png
+    - images/emma.png
+    - images/john.png
+    - images/shink.png
+    - images/
+    - assets/sounds/success.mp3
